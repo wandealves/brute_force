@@ -1,9 +1,11 @@
 import { Request, Response } from 'express';
 
+import User from '../models/user';
+
 class UsersController {
   public async show(request: Request, response: Response): Promise<Response> {
 
-    const users = [
+    const users:User[] = [
       {id:1,name:'user 01'},
       {id:2,name:'user 02'},
       {id:3,name:'user 03'},
